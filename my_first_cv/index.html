@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>My Resume</title>
+<link rel="stylesheet" href="css.css">
+
+<script src="script.js"></script>
+<script src="https://use.fontawesome.com/9cf7eb9801.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+<script>
+$(document).ready(function() {
+
+  $(window).scroll(skillsbar);
+  $(window).scroll(stretch);
+  $(window).scroll(logo);
+
+  function skillsbar() {
+    if ($(".skills").offset().top <= $(window).scrollTop()) {
+      $(".70percent-bar").addClass("bar-animation70");
+      $(".70percent-mark").addClass("percent-animation70");
+      $(".50percent-bar").addClass("bar-animation50");
+      $(".50percent-mark").addClass("percent-animation50");
+      $(".30percent-bar").addClass("bar-animation30");
+      $(".30percent-mark").addClass("percent-animation30");
+    }
+  }
+
+  function stretch() {
+    if ($(document).height() == $(window).height() + $(window).scrollTop()) {
+      $(".underline").addClass("stretch");
+    }
+  }
+
+  function logo() {
+    if ($(window).scrollTop() > 49) {
+      $(".menu").addClass("menu-fixed");
+    }
+    else {
+      $(".menu").removeClass("menu-fixed");
+    }
+  }
+
+});
+</script>
+
+
+</head>
+
+<body>
+
+<div class="menu">
+  <div class="inner">
+    <div class="logo"><a href="#top">Dean Lin.</a></div>
+    <nav class="navigation">
+      <ul>
+        <li><a href="#link1">About Me</a></li>
+        <li><a href="#link2">Skills</a></li>
+        <li><a href="#link3">Education</a></li>
+        <li><a href="#link4">Campus Activities</a></li>
+        <li><a href="#link5">Get In Touch</a></li> 
+      </ul>
+    </nav>
+  </div> <!-- End of inner -->
+</div>
+
+<div id="top" class="header">
+
+<img class="portrait" src="portrait.jpg">
+<div class="filter">
+</div>
+<div class="intro">
+</div>
+
+<div class="dean">
+<h1>I'm Dean Lin.</h1>
+<!-- <p>I want to apply for the front-end engineer internship.</p> -->
+
+
+<nav class="social-link">
+<a class="facebook" href="https://www.facebook.com/profile.php?id=100000890927619">
+<i class="fa fa-facebook-square fa-3x"></i></a>
+
+<a class="twitter" href="https://twitter.com/richer6605">
+<i class="fa fa-twitter-square fa-3x"></i></a>
+
+<a class="googleplus" href="https://plus.google.com/u/0/108576633356525868222/posts/p/pub">
+<i class="fa fa-google-plus-square fa-3x"></i></a>
+
+<a class="linkedin" href="https://www.linkedin.com/in/%E6%89%BF%E7%85%9C-%E6%9E%97-854b13120?trk=hp-identity-name">
+<i class="fa fa-linkedin-square fa-3x"></i></a>
+</nav>
+</div>
+
+
+<div id="link1" class="about">
+<h3>About</h3>
+<p>I currently study at National Cheng-Chi University as a senior student, majoring in Economics.
+I have great passion for front-end web development, and engage in front-end programming languages
+by myself for approximately 3 months. 
+</p>
+</div>
+
+<div class="basic-inf">
+<h3>Basic Information</h3>
+<ul>
+  <li><h6>Address:</h6> Sec.2, Zhinan Rd., Wenshan Dist., Taipei City 116</li>
+  <li><h6>Date of Birth:</h6> 17th Nov., 1993</li>
+  <li><h6>Place of Birth:</h6> Taoyuan City 330, Taiwan(R.O.C.)</li>
+  <li><h6>Language:</h6> Chinese(Traditional), English</li>
+  <li><h6>Gender:</h6> Male</li>
+</ul>
+</div>
+
+</div> <!-- End of header -->
+
+
+<div id="link2" class="skills">
+
+<div class="skills-wrapper">
+<h3>Skills</h3>
+
+<p>HTML</p>
+<div class="skills-bar-overlap">
+<div class="skills-bar 70percent-bar">
+<div class="skills-bar-percent 70percent-mark"><span>60%</span></div>
+</div>
+</div>
+
+<p>CSS</p>
+<div class="skills-bar-overlap">
+<div class="skills-bar 50percent-bar">
+<div class="skills-bar-percent 50percent-mark"><span>40%</span></div>
+</div>
+</div>
+
+<p>Javascript / jQuery</p>
+<div class="skills-bar-overlap">
+<div class="skills-bar 30percent-bar">
+<div class="skills-bar-percent 30percent-mark"><span>30%</span></div>
+</div>
+</div>
+
+</div>
+
+<div class="img-wrapper">
+</div>
+
+</div> <!-- End of Skills -->
+
+<div id="link3" class="education">
+<h3>Education</h3>
+
+<div class="floating">
+<div class="block">
+<h4>2012 - Present</h4>
+</div>
+
+<div class="banner">
+<h4>National Cheng-Chi University - <span class>Department of Economics</span></h4>
+<p>Estimated graduation day: July, 2017. </p>
+
+<div class="arrow"></div>
+</div>
+</div>
+
+</div> <!-- End of Education -->
+
+<div id="link4" class="campus">
+
+<h3>Campus Activities</h3>
+
+  <div class="activities">
+
+  <div class="laurel">
+  <img class="laurel" src="laurel.png">
+  </div>
+  
+  <div class="activities-content">
+  <h4>NCCU Kendo Club</h4>
+    <p class="year">2012 - 2014</p>
+    <p>Intesive training in Kendo prepares me for harsh challenges, since it's a martial art 
+requiring mental toughness. In addition, it's also a sport nurturing your spirit of teamwork,
+by trainning and participating in group competition with your teammates.
+    </p>
+  </div>
+
+  <span class="brd-top"></span>
+  <span class="brd-bottom"></span>
+
+  </div>
+
+  <div class="activities">
+
+  <div class="laurel">
+  <img class="laurel" src="laurel.png">
+  </div>
+
+  <div class="activities-content">
+  <h4>NCCU Sport Club Summer Camp</h4>
+    <p class="year">2013 - 2014</p>
+    <p>In the event, I play the role as a team leader. This is a great experience for me to
+    cooperate with other team leaders, instructors, and the cheif convener, etc. Together, we
+    handle children on each team and address problems like children's injuries and illness,
+    as well as delay of the course process and children performances. The camp is definitely
+    a hard task, but we manage to get through it with teamwork.
+    </p>
+  </div>
+
+  <span class="brd-top"></span>
+  <span class="brd-bottom"></span>
+
+  </div>
+
+  <div class="activities">
+
+  <div class="laurel">
+  <img class="laurel" src="laurel.png">
+  </div>
+
+  <div class="activities-content"> 
+  <h4>NCCU Souvenir & Alumni Service Center</h4>
+    <p class="year">2013 - 2014</p>
+    <p>This part-time job allows me to learn the basic skills of communication. 
+    Working as a receptionist, my main duty is attending to affairs from alumni and
+    selling souvenirs. You have to communicate with alumni, students, or sometimes
+    foreign students.
+    </p>
+  </div>
+
+  <span class="brd-top"></span>
+  <span class="brd-bottom"></span>
+
+  </div>
+
+</div> <!-- End of Campus -->
+
+<div id="link5" class="getintouch">
+<h3>Get In Touch</h3>
+<div class="contact">
+  <p class="underline">Phone: 0972-722-395</p>
+  <p class="underline">Email: richer6605@gmail.com</p>
+</div>
+
+</div> <!-- End of GetInTouch -->
+
+</body>
+</html>
