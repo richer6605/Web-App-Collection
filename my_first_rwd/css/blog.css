@@ -1,0 +1,324 @@
+/*
+ * Globals
+ */
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  position: fixed; /* custom */
+  top: 0;
+  width: 100%;     /* custon */
+  z-index: 100;    /* custon */
+}
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+}
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 20px;
+  color: #999;
+}
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+  background: rgba(238, 238, 238, 0.65);
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #eee  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-module li {
+  display: inline-block;
+}
+
+.sidebar-module {
+  text-align: center;
+}
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 60px;
+  background: rgba(238, 238, 238, 0.65);
+  padding: 15px;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/* Customized CSS */
+.search-wrap {
+  float: none;
+  margin: 0 auto;
+}
+
+.jumbotron {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  background-image: url(../images/sky_filter.jpg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron h1 {
+  margin-bottom: 15px;
+  font-size: 63px;
+  padding: 0 15px;
+}
+
+.navbar-header {
+  float: none;
+}
+
+/* offset float left to center the logo,
+   adjust height by padding,
+   set inline-block to control logo's clickable area */
+a.navbar-brand {
+  padding: 0;
+  display: inline-block;
+  float: none;
+}
+
+/*
+a.navbar-brand img {
+  margin: 0 auto;
+}*/
+
+
+/* center nav buttons */
+.nav-item-container {
+  display: inline-block;
+}
+
+
+.blog-nav {
+  text-align: center;
+}
+
+/*viewport height for jumbotron*/
+.blog-header {
+  min-height: 100vh;
+}
+
+/*Vertical alignment of h1 and input*/
+.headline {
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
+}
+
+/* Search bar width adjustment */
+@media screen and (min-width: 768px) {
+  .search-wrap {
+    padding: 0 10%;
+  }
+
+  .blog-sidebar {
+    margin-top: 60px;
+    margin-left: 30px;
+  }
+
+  .blog-m1 {
+    padding: 60px 30px;
+    float: right;
+  }
+
+  div.post1 {
+    margin-bottom: 0;
+  }
+
+  .blog-post {
+    margin-bottom: 30px;
+  }
+
+  .blog-m2 {
+    padding: 60px 30px;
+  }
+
+}
+
+/* sidebar margin */
+@media screen and (max-width: 768px) {
+  .blog-sidebar {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .sidebar-module {
+    margin: 0px;
+    border-bottom: 1px solid #b3d0e9;
+  }
+
+}
+
+/* Litter device font size adjustment */
+@media screen and (max-width: 487px) {
+  .jumbotron h1 {
+    font-size: 40px;
+  }
+}
+
+/* Banner & Scrolling Effects */
+.banner {
+  height: 2px;
+  background-color: #fff;
+}
+
+/* container background */
+.ctn-1 {
+  background-image: url(../images/sky2_filter.jpg);
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ctn-2 {
+  background-image: url(../images/sky3_filter.jpg);
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ctn-1, .ctn-2 {
+  width: 100%;
+  margin: 0;
+}
+
+/* page button */
+ ul.pager li a {
+  background: rgba(255, 255, 255, 0.75);
+ }
