@@ -1,0 +1,35 @@
+@import 'normalize.css'
+
+body
+	background-color: #ededed
+	display: flex
+	height: 100vh
+
+.nav-list
+	display: flex
+	position: relative
+	justify-content: space-around
+	align-items: center
+	list-style: none
+	width: 50%
+	height: 50px
+
+	#shift-bar
+		position: absolute
+		background-color: #000
+		width: 0%
+		height: 3px
+		bottom: 0
+		left: -10px	
+
+	.nav-item
+		padding: 5px
+
+		&:hover
+
+		a
+			text-decoration: none
+			color: #000
+			font-family: 'Open Sans', Arial, sans-serif
+			font-size: 1.5em
+			opacity: 0.25
