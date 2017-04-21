@@ -1,9 +1,27 @@
 let items = document.getElementsByClassName('nav-link');
 let shiftBar = document.getElementById('shift-bar');
+let activeElem;
+
+window.addEventListener('resize', () => {
+	console.log('hi');
+	let itemOffset = activeElem.offsetLeft;
+	let shiftBarOffset = shiftBar.offsetLeft;
+	let itemWidth = activeElem.offsetWidth;
+	let shiftBarWidth = shiftBar.offsetWidth;
+	shiftBar.animate([
+	{ "left": `${shiftBarOffset}px`, "width": `${shiftBarWidth}px`},
+	{ "left": `${itemOffset}px`, "width": `${itemWidth}px`}
+		], {
+			duration: 100,
+			easing: "ease-in-out"
+		});
+	shiftBar.style.left = `${itemOffset}px`;
+	shiftBar.style.width = `${itemWidth}px`;
+});
 
 Array.from(items).forEach(function shift(elem) {
-	let activeElem;
-	elem.addEventListener('mouseover', event => {
+	console.log('hi');
+	elem.addEventListener('mouseover', () => {
 		if (elem != activeElem) {
 			let itemOffset = elem.offsetLeft;
 			let shiftBarOffset = shiftBar.offsetLeft;
@@ -25,7 +43,6 @@ Array.from(items).forEach(function shift(elem) {
 			shiftBar.style.width = `${itemWidth}px`;
 			shiftBar.style.background = `rgb(${r}, ${g}, ${b})`;
 			activeElem = elem;
-			console.log(activeElem);
 		}
 	});
 });
