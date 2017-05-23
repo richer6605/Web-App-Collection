@@ -1,0 +1,38 @@
+@import url(normalize.css);
+html {
+  overflow: hidden; }
+
+body {
+  background-color: #DF3B3F;
+  display: inline-flex;
+  flex-direction: column; }
+
+#timeline1 {
+  background-color: #E9E97D;
+  position: relative;
+  display: inline-flex;
+  height: 45vh; }
+  #timeline1 img {
+    height: 100%; }
+
+#scrollDiv {
+  background-color: #F4CC48;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30px; }
+  #scrollDiv #scrollBar {
+    background-color: #0096ff;
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px; }
+
+#timeline2 {
+  background-color: #FCAA4B;
+  position: relative;
+  display: inline-flex;
+  height: 25vh; }
+
+/*# sourceMappingURL=style.css.map */
